@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luxenailsalon&spa</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+  <header>
+    <h1>Luxenailsalon&spa</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Welcome to Luxe Nail Salon & Spa</h2>
+      <p>Pamper yourself with our luxury spa experiences and nail services 💅</p>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Luxe Nail Salon & Spa is your go-to spot for relaxation, rejuvenation, and flawless nails. We offer a serene atmosphere with professional care.</p>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Manicures & Pedicures</li>
+        <li>Gel Nails & Acrylics</li>
+        <li>Facials & Skin Care</li>
+        <li>Relaxing Massage Therapy</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: contact@luxenailsalonspa.com</p>
+      <p>Phone: (555) 123-4567</p>
+      <button onclick="sayHello()">Say Hello</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Luxe Nail Salon & Spa. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+Stylesheet.css
+/* Luxe Spa Theme Styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff5f8;
+  color: #444;
+}
+
+header {
+  background-color: #f48fb1;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #c2185b;
+}
+
+footer {
+  background-color: #f48fb1;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+button {
+  background-color: #c2185b;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #880e4f;
+}
+script.js
+// Simple interactive function
+function sayHello() {
+  alert("Thank you for reaching out to Luxe Nail Salon & Spa! 💖");
+}
+<nav>
+  <ul>
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="appointment.html">Appointment</a></li>
+  </ul>
+</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Appointment - Luxenailsalon&spa</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+  <header>
+    <h1>Luxenailsalon&spa</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="appointment.html">Appointment</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Book an Appointment</h2>
+      <form id="appointmentForm" onsubmit="return validateAppointment()">
+        <label for="name">Full Name <span class="required">*</span></label><br>
+        <input type="text" id="name" name="name" required minlength="2" placeholder="Your full name"><br><br>
+
+        <label for="email">Email <span class="required">*</span></label><br>
+        <input type="email" id="email" name="email" required placeholder="example@domain.com"><br><br>
+
+        <label for="phone">Phone Number <span class="required">*</span></label><br>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br><br>
+
+        <label for="birthdate">Birthdate</label><br>
+        <input type="date" id="birthdate" name="birthdate" min="1900-01-01" max="2020-12-31"><br><br>
+
+        <button type="submit">Submit Appointment</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Luxe Nail Salon & Spa. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function validateAppointment() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+      let errors = [];
+
+      if (name.length < 2) {
+        errors.push("Name must be at least 2 characters.");
+      }
+
+      if (!emailPattern.test(email)) {
+        errors.push("Please enter a valid email.");
+      }
+
+      if (errors.length > 0) {
+        alert(errors.join('\n'));
+        return false;
+      }
+
+      alert("Thank you for booking your appointment with Luxe Nail Salon & Spa!");
+      return true;
+    }
+  </script>
+
+</body>
+</html>
